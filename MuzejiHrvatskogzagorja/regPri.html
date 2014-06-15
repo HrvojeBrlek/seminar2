@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Muzeji Hrvatskog zagorja</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="css/stil.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="css/grid.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="css/normalize.css" type="text/css" charset="utf-8" />
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+
+	<div class="logo row">
+		<img src="img/logo/MHz2.jpg" alt="" />
+		<h1><strong>MUZEJI HRVATSKOG ZAGORJA</strong></h1>
+	</div>
+	
+	<div class="pocetak">
+		<p>Ne želite se ni prijaviti ni registrirati? Nastavite <a href="index.php">OVDJE</a>
+	</div>
+	
+	<div class="navigacija row">
+	
+		<div class="registracija column column-6">
+			<ul>
+				<li><a id="reg" href="javascript:;" onclick="javascript:ShwHid('HiddenDiv')">Registracija</a></li>				
+			</ul>
+		</div>
+				
+		
+		<div class="prijava column column-6">
+			<ul>
+				<li><a href="javascript:;" onclick="javascript:ShwHid('HiddenDiv2')">Prijava</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	
+	
+	<div class="registracijaIPrijava row">
+		<!-- Forma za registraciju-->
+		<div class="registracija_forma column column-5">
+		
+			<div id="HiddenDiv" class="mid" style="display: none;">
+					<form id="registracija" name="registracija" action="registracija.php" method="POST" >
+						
+						<label for="username">Korisničko ime:</label><br/>
+						<input id="username" type="text" name="username" placeholder="Minimalno 3 znaka" aria-describedby="username-format" required aria-required=”true” pattern="([A-Za-z-0-9]| |č|ć|ž|š|đ|Č|Ć|Ž|Š|Đ){3,21}" /><br/><br/>
+						
+						<label for="password">Lozinka:</label><br/>
+						<input id="password" type="password" name="password" placeholder="Minimalno 8 znakova" aria-describedby="pass-format" required aria-required=”true” pattern="([a-zA-Z-0-9]| |č|ć|ž|š|đ|Č|Ć|Ž|Š|Đ){8,29}" title="Lozinka mora imati minimalno 8 znakova"/><br/><br/>
+						
+						<label for="firstname">Ime:</label><br/>
+						<input id="firstname" type="text" name="firstname" required aria-describedby="firstname-format" aria-required=”true” pattern="([A-Za-z]| |č|ć|ž|š|đ|Č|Ć|Ž|Š|Đ){3,15}"/><br/><br/>
+						
+						<label for="surname">Prezime:</label><br/>
+						<input id="surname" type="text" name="surname" aria-describedby="surname-format" required aria-required=”true” pattern="([A-Za-z]| |č|ć|ž|š|đ|Č|Ć|Ž|Š|Đ){3,21}"/><br/><br/>
+						
+						<label for="mail">E-mail:</label><br/>
+						<input id="mail" type="email" name="mail" aria-describedby="email-format" required aria-required=”true” /><br/><br/>
+						
+						<label for="broj">Broj telefona:</label><br/>
+						<input id="broj" type="text" name="broj" placeholder="pr: 0123456789" aria-describedby="broj-format" required aria-required=”true” pattern="[0-9]+"/><br/><br/>
+						
+						<input type="submit" name="registriraj" value="Registrirajte se" />
+			</form>
+			</div>
+		</div>
+		
+			<!-- Forma za prijavu-->
+		<div class="prijava_forma column column-5">
+			<div id="HiddenDiv2" class="mid" style="display: none;">
+				<form id="prijava" name="prijava" action="prijava.php" method="POST" >
+				
+					<label for="username">Korisničko ime:</label><br/>
+					<input id="username" type="text" name="username" placeholder="Minimalno 3 znaka" aria-describedby="username-format" required aria-required=”true” pattern="([A-Za-z-0-9]| |č|ć|ž|š|đ|Č|Ć|Ž|Š|Đ){3,21}" /><br/><br/>
+						
+					<label for="password">Lozinka:</label><br/>
+						<input id="password" type="password" name="password" placeholder="Minimalno 8 znakova" aria-describedby="pass-format" required aria-required=”true” pattern="([a-zA-Z-0-9]| |č|ć|ž|š|đ|Č|Ć|Ž|Š|Đ){8,29}" title="Lozinka mora imati minimalno 8 znakova"/><br/><br/>
+					
+					<input type="submit" name="prijavi" value="Prijavite se"/>
+				</form>
+			</div>
+		</div>
+		
+		<!--JavaScript kod koji prikazuje i skriva tekst kada se stisne na registraciju ili prijava-->
+		<script language="JavaScript">
+
+				function ShwHid(divId){
+					if(document.getElementById(divId).style.display == 'none'){
+						document.getElementById(divId).style.display='block';
+					}
+					else {
+						document.getElementById(divId).style.display='none';
+					}
+				}
+		</script>
+		
+	</div>
+	
+	
+	<div class="footer">
+		Copyright
+	</div>
+
+	
+	<div id="google_translate_element"></div>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+				pageLanguage: 'hr',
+				layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+			}, 'google_translate_element');
+		}
+	</script>
+	
+</body>
+</html>
